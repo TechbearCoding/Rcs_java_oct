@@ -25,8 +25,28 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ievadiet vārdu!");
-        String ievade = sc.nextLine();
-        System.out.println(ievade);
+
+//        1) Likt lietotājam ievadīt savu vārdu.
+//        2) Izvadei ir jābūt- "Sveiki, lietotāja vārds"
+
+//        System.out.println("Ievadiet savu vārdu!");
+//        String ievade = sc.nextLine();
+//
+//        System.out.println("Sveiki, " + ievade);
+
+//        1) Likt lietotājam ievadīt 3 simbolu virknes (atsevišķi)
+//                2) Izvadīt otrādā secībā.
+//                Piemērs, ja ievada "aa", "bb", "cc"-> ccbbaa
+
+        System.out.println("Ievadiet 1. virkni!");
+        String a = sc.nextLine();
+
+        System.out.println("Ievadiet 2. virkni!");
+        String b = sc.nextLine();
+
+        System.out.println("Ievadiet 3. virkni!");
+        String c = sc.nextLine();
+
+        System.out.println(c + b + a);
     }
 }
