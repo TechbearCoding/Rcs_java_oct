@@ -27,7 +27,12 @@ public class Main {
             System.out.println("Kļūda!");
         }
 
-
+        //String if
+        //ir vai nav vienads
+        String b = sc.next();
+        if(b.equals("bbb")){
+            System.out.println("ir vienāds");
+        }
 
     }
 
