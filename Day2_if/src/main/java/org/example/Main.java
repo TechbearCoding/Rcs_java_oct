@@ -4,7 +4,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
+        sample3();
+    }
+
+    public static void sample3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet 1. skaitli!");
+        int a = sc.nextInt();
+
+        //Izvadīt "jā", ja skaitlis ir pozitīvs un "nē", ja skaitlis ir negatīvs un izvadīt kļūdas paziņojumu, ja ir 0
+        //>
+        //<
+        //>=
+        //<=
+        //==
+        //!=
+        if(a > 0){
+            System.out.println("Jā");
+        }else if(a < 0){
+            System.out.println("Nē");
+        }else{
+            System.out.println("Kļūda!");
+        }
+
+
+
     }
 
     public static void task1(){
