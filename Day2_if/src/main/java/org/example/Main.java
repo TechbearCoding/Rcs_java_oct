@@ -9,7 +9,7 @@ public class Main {
 
     public static void task1(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ievadiet skaitli!");
+        System.out.println("Ievadiet 1. skaitli!");
         int a = sc.nextInt();
 
         System.out.println("Ievadiet 2. skaitli!");
