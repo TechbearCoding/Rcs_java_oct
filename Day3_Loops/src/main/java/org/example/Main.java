@@ -7,10 +7,26 @@ public class Main {
 //        String a = "aaa";
 //        int b = a.length();
 
-        sample6();
-//        task3();
+//        sample6();
+        task4();
     }
+    public static void task4(){
+        Scanner sc = new Scanner(System.in);
+        String word = "Unicorn";
 
+        String input = "";
+
+        while(!input.equals(word)){
+            System.out.println("Uzmini vārdu!");
+            input = sc.nextLine();
+
+            if(!input.equals(word)){
+                System.out.println("Mēģini vēlreiz!");
+            }
+        }
+
+        System.out.println("Uzminēji!");
+    }
     public static void sample6(){
         //Uztaisīt ciklu, kas darbojas kamēr lietotājs neievada negatīvu skaitli
         //Izvadīt skaitļu summu
