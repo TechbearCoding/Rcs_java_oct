@@ -7,10 +7,60 @@ public class Main {
 //        String a = "aaa";
 //        int b = a.length();
 
-        sample4();
-//        task2();
+        sample6();
+//        task3();
     }
 
+    public static void sample6(){
+        //Uztaisīt ciklu, kas darbojas kamēr lietotājs neievada negatīvu skaitli
+        //Izvadīt skaitļu summu
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        int input = 0;
+
+        while(input >= 0 ){
+
+            System.out.println("Ievadiet skaitli!");
+            input = sc.nextInt();
+            if(input < 0){
+                break;
+            }
+
+            sum = sum + input;
+        }
+
+        System.out.println("Summa ir " + sum);
+    }
+
+    public static void sample5(){
+        Scanner sc = new Scanner(System.in);
+        String input = "";
+        //cikls darbojas, kamer cilveks neuzraksta vardu "exit"
+        while(!input.equals("exit")){
+            System.out.println("Hello world!");
+
+            System.out.println("Ievadīt simbolu virkni!");
+            input = sc.nextLine();
+        }
+    }
+
+    public static void task3(){
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        for(int i = 0; i < 5; i++){
+            System.out.println("Lūdzu ievadiet skaitli!");
+            int number = sc.nextInt();
+
+            if(number > 0){
+                sum = sum + number;
+            }else{
+                System.out.println("Kļūda!");
+            }
+        }
+        System.out.println("Summa ir " + sum);
+    }
     public static void sample4(){
         Scanner sc = new Scanner(System.in);
 
