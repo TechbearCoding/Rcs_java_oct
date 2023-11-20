@@ -4,11 +4,40 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        String a = "aaa";
-//        int b = a.length();
+        //homework2();
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Integer.MAX_VALUE);
+    }
+    public static void homework2(){
+        Scanner sc = new Scanner(System.in);
 
-//        sample6();
-        task4();
+        System.out.println("Ievadiet skaitli!");
+        int input = sc.nextInt();
+
+        int last = Integer.MIN_VALUE;
+
+        while(input > last){
+            System.out.println(input);
+            last = input;
+
+            System.out.println("Ievadiet skaitli!");
+            input = sc.nextInt();
+        }
+
+    }
+    public static void homework1(){
+        String symbol = "";
+        for(int i = 0; i < 5; i++){
+            symbol = symbol + "$";
+            System.out.println(symbol);
+        }
+
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j <= i; j++ ){
+                System.out.print("$");
+            }
+            System.out.println();
+        }
     }
     public static void task4(){
         Scanner sc = new Scanner(System.in);
