@@ -4,11 +4,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        String a = sampleFull("aaaaa", "bbbbbb", "cccccc");
-        System.out.println(a);
+        int sum = task3(5);
+        System.out.println(sum);
+    }
 
-//        int result = sampleWithReturn();
-//        System.out.println(result);
+    public static int task3(int count){
+        if(count < 1){
+            System.out.println("Kļūda");
+            return 0;
+        }
+
+        int sum = 0;
+
+        for(int i = 1; i <=count; i++){
+            sum = sum + i;
+        }
+
+        return sum;
     }
 
     public static String sampleFull(String a, String b, String c){
