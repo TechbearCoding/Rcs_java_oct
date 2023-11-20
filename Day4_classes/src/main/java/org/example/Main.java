@@ -1,15 +1,62 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        String a = sampleFull("aaaaa", "bbbbbb", "cccccc");
+        System.out.println(a);
 
-        String a = "aaa";
-        String b = "bbbbbb";
-        String c = "ccccc";
+//        int result = sampleWithReturn();
+//        System.out.println(result);
+    }
 
-        task1(a, b, c);
+    public static String sampleFull(String a, String b, String c){
+        String result = c + b + a;
+        if(result.length() <= 15){
+            return result;
+        }else{
+            return c + a;
+        }
+    }
+    public static String anotherSample(){
+        return "aaa" + "bbb";
+    }
 
-        task1("qqqqasdnmsdf", "hiddsf", "yyyyyyy");
+    public static int sampleWithReturn(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadiet skaitli!");
+        int a = sc.nextInt();
+
+        System.out.println("Ievadiet skaitli!");
+        int b = sc.nextInt();
+
+        int c = a + b;
+
+        return c;
+    }
+
+    public static void task2b(int count) {
+        if(count < 1){
+            count = 1;
+        }
+        String symbol = "";
+        for (int i = 0; i < count; i++) {
+            symbol = symbol + "$";
+            System.out.println(symbol);
+        }
+    }
+
+    public static void task2(int count) {
+        if(count > 0){
+            String symbol = "";
+            for (int i = 0; i < count; i++) {
+                symbol = symbol + "$";
+                System.out.println(symbol);
+            }
+        }else{
+            System.out.println("$");
+        }
     }
 
     public static void task1(String a, String b, String c){
