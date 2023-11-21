@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //sample1();
-        System.out.println(combineStrings("eee"));
+        Samples2.run();
     }
 
     public static String combineStrings(String param){
@@ -20,22 +19,6 @@ public class Main {
         }
 
         return result;
-    }
-
-    public static void sample1(){
-        int a = sum();
-        System.out.println(a);
-    }
-
-    public static int sum(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ievadiet skaitli!");
-        int sk1 = sc.nextInt();
-
-        System.out.println("Ievadiet skaitli!");
-        int sk2 = sc.nextInt();
-
-        return sk1 + sk2;
     }
 
     public static void task1(String symbols, int count){
