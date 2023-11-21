@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Samples2.run();
+        System.out.println(Tasks.biggestNumber(4));
     }
 
     public static String combineStrings(String param){
