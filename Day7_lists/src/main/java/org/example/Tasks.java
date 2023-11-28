@@ -53,4 +53,18 @@ public class Tasks {
             System.out.println("Nepareiza ievade!");
         }
     }
+
+    public static int task3(){
+        System.out.println("Ievadiet skaitli!");
+        Scanner sc = new Scanner(System.in);
+        int number;
+        try{
+            number = sc.nextInt();
+        }
+        catch(Exception e){
+            number = 0;
+        }
+
+        return number;
+    }
 }
