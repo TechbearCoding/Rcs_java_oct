@@ -6,6 +6,6 @@ public class Main {
 //        double[] b = {1.1, 2, 5, 7, 8.9};
 //        System.out.println(Tasks.task1(b));
 //        Samples.run();
-        Tasks.task2();
+        System.out.println(Homework.task3());
     }
 }
