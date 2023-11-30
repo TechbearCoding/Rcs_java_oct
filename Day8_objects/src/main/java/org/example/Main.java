@@ -6,7 +6,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        sample1();
+        task2();
+    }
+
+    private static void task2() {
+        List<Book> bookList = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+        for(int i = 0; i < 5; i++){
+            System.out.println("Ievadiet autora vārdu!");
+            String name = sc.nextLine();
+            System.out.println("Ievadiet grāmatas nosaukumu!");
+            String bookName = sc.nextLine();
+            System.out.println("Izdošanas gads:");
+            int year = sc.nextInt();
+            bookList.add(new Book(name, bookName, year));
+        }
+
+        for(int i = 0; i < 5; i++){
+            bookList.add(addBook());
+        }
+
+        for(int i = 0; i < bookList.size(); i++){
+            bookList.get(i).print();
+        }
     }
 
     public static void sample2(){
@@ -45,15 +68,13 @@ public class Main {
 
         studentLst.add(new Student("Anna", "Vītola", 2));
 
-        studentLst.get(0).lastName = "aaa";
-
         for(int i = 0; i < studentLst.size(); i++){
             System.out.println(studentLst.get(i).lastName);
             studentLst.get(i).print();
         }
 
-        for(var s : studentLst){
-           s.print();
-        }
+//        for(Student s : studentLst){
+//           s.print();
+//        }
     }
 }
