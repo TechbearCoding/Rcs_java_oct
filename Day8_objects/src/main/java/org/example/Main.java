@@ -6,7 +6,49 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task2();
+        List<Student> lst = new ArrayList<>();
+        lst.add(new Student("test", "test2", 1));
+        lst.add(new Student("test2", "test2", 2));
+
+        List<Student> lst2 = getStudentLst(-2);
+        printStudentList(lst2);
+    }
+
+    private static List<Student> getStudentLst(int a){
+        if(a < 1){
+            System.out.println("Kļūda!");
+            a = 1;
+        }
+        List<Student> lst = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+        for(int i = 0; i < a; i++){
+            System.out.println("Ievadiet studenta vārdu!");
+            String name = sc.nextLine();
+            System.out.println("Ievadiet studenta uzvārdu!");
+            String lastName = sc.nextLine();
+            System.out.println("Ievadiet kursu!");
+            int course;
+            try{
+                course = sc.nextInt();
+            }catch(Exception e){
+                System.out.println("Kļūda!");
+                course = 1;
+            }
+
+            sc.nextLine();
+            lst.add(new Student(name, lastName, course));
+        }
+        return lst;
+    }
+
+    private static void printStudentList(List<Student> lst){
+        if(lst.isEmpty()){
+            System.out.println("Saraksts ir tukšs!");
+        }
+        for(var st : lst){
+            st.print();
+        }
     }
 
     private static void task2() {
