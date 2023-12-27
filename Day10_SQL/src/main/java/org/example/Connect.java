@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class Connect {
 
     public static Connection connect(){
-        String url = "jdbc:sqlite:C:\\Users\\Marti\\Desktop\\chinok.db";
+        String url = "jdbc:sqlite:C:\\Users\\Marti\\Desktop\\chinook.db";
         Connection conn = null;
 
         try{
@@ -24,14 +24,15 @@ public class Connect {
         String sql = "SELECT * FROM artists";
 
         try{
-            Statement stm = new conn.createStatement();
-            ResultSet rs = stm.getResultSet();
+            Statement stm = conn.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
 
             while(rs.next()){
                 System.out.println(rs.getString("Name"));
         }
         }catch(Exception e){
-
+            System.out.println(e.getMessage());
         }
     }
+    //https://www.tutorialspoint.com/sqlite/sqlite_java.htm
 }
