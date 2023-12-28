@@ -28,8 +28,10 @@ public class Connect {
             ResultSet rs = stm.executeQuery(sql);
 
             while(rs.next()){
-                System.out.println(rs.getString("Name"));
-        }
+                System.out.print(rs.getInt("ArtistId") + ") " );
+                System.out.print(rs.getString("Name"));
+                System.out.println();
+            }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
