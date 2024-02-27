@@ -21,7 +21,24 @@ public class Connect {
         }
         return conn;
     }
+    public static Employee getEmployee(Connection conn, int id){
+        String sql = "SELECT * FROM employees WHERE id=" + id;
+        Employee emp = new Employee();
 
+        try{
+            Statement stm = conn.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+
+            while(rs.next()){
+                emp = new Employee(rs.getInt("id"), rs.getString("name"),
+                        rs.getString("surname"), rs.getInt("exp"));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return emp;
+    }
     public static List<Employee> getEmployees(Connection conn){
         String sql = "SELECT * FROM employees";
         List<Employee> emp = new ArrayList<>();
